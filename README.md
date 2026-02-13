@@ -1,16 +1,50 @@
-# React + Vite
+# Economic Intent Content Architecture — Microsite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive single-page microsite presenting the Economic Intent content translation framework for Salesforce ISV partner marketing.
 
-Currently, two official plugins are available:
+## What this is
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A content strategy tool that reframes existing platform content around three economic decision pillars:
 
-## React Compiler
+- **Revenue Expansion** — Will this create durable, compounding revenue?
+- **Innovation at Enterprise Speed** — Can I ship fast without increasing risk or debt?
+- **Strategic Credibility & Ecosystem Gravity** — Will this reduce friction internally and externally?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Each asset is translated through two editorial angles (Access Advantage / Expertise Advantage) using an Extract → Reframe → Repackage workflow.
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS v4
+- shadcn/ui (Radix primitives)
+- Framer Motion
+- Lucide icons
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Output goes to `dist/`.
+
+## Structure
+
+```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui primitives
+│   └── MicrositeEconomicIntent.tsx  # Main microsite component
+├── lib/utils.ts         # cn() utility
+├── App.tsx
+├── main.tsx
+└── index.css            # Tailwind + theme tokens
+```
